@@ -1,0 +1,71 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:rgba(72, 30, 210, 0.145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333333a4;
+    text-align: center;
+}
+
+h1 {
+    color: #724caf;
+    margin-bottom: 20px;
+}
+
+.weather-card {
+    background-color: rgba(100, 175, 237, 0.218);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+}
+
+.weather-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.weather-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-details div {
+    font-size: 14px;
+}
+
+form input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #cccccca9;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #aa4caf;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a07a45;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Link to the CSS file inside the 'public' folder -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Weather in <%= city %></h1>
+
+    <% if (weather) { %>
+        <div class="weather-card">
+            <div class="weather-info">
+                <strong>Temperature:</strong> <%= weather.main.temp %> °C
+            </div>
+            <div class="weather-description">
+                <strong>Condition:</strong> <%= weather.weather[0].description %>
+            </div>
+
+            <div class="weather-details">
+                <div>
+                    <strong>Humidity</strong><br><%= weather.main.humidity %> %
+                </div>
+                <div>
+                    <strong>Wind Speed</strong><br><%= weather.wind.speed %> m/s
+                </div>
+                <div>
+                    <strong>Pressure</strong><br><%= weather.main.pressure %> hPa
+                </div>
+            </div>
+        </div>
+    <% } else { %>
+        <p>Weather data is not available at the moment.</p>
+    <% } %>
+
+    <!-- Form to change the city -->
+    <form method="get" action="/">
+        <input type="text" name="city" placeholder="Enter city name" value="<%= city %>">
+        <button type="submit">Get Weather</button>
+    </form>
+</body>
+</html>
